@@ -14,12 +14,7 @@ public class MilesToKm {
 	// 1 statute mile = 1.609344 kilometers
     private final double MILES_TO_KM_FACTOR = 1.609344;
 
-    /**
-     * Reads distance in miles from the user, validates the entry,
-     * and displays the converted distance in kilometers.
-     * 
-     * @param scanner active Scanner object passed from DriverMain
-     */
+    //@param scanner active Scanner instance passed from DriverMain
     public void convertMilesToKm(Scanner scanner) {
         System.out.println("\n=================================");
         System.out.println("     MILES TO KILOMETERS         ");

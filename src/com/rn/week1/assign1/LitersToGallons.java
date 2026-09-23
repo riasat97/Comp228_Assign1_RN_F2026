@@ -14,12 +14,7 @@ public class LitersToGallons {
     // 1 liter = 0.2641720524 US gallons
     private final double LITERS_TO_GALLONS_FACTOR = 0.2641720524;
 
-    /**
-     * Prompts the user for a volume in liters, performs validation,
-     * and computes and displays the volume in gallons.
-     * 
-     * @param scanner active Scanner instance passed from DriverMain
-     */
+    //@param scanner active Scanner instance passed from DriverMain
     public void convertLitersToGallons(Scanner scanner) {
         System.out.println("\n=================================");
         System.out.println("       LITERS TO GALLONS         ");
