@@ -56,9 +56,9 @@ public class DriverMain {
             }
         }catch (InputMismatchException e) {
             System.out.println("\n[!] Input Error: Choice must be an integer (1 to 4).");
-            System.out.println("Exception Message:           " + e.getMessage());
-            System.out.println("Exception Localized Message: " + e.getLocalizedMessage());
-            System.out.println("Exception Hashcode:          " + e.hashCode());
+            System.out.println("Exception Class:             " + e.getClass().getSimpleName());
+        	System.out.println("Exception Details:           " + e.toString());
+        	System.out.println("Exception Hashcode:          " + e.hashCode());
         }
     }
 }

@@ -1,11 +1,9 @@
 package com.rn.week1.assign1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * Task C: Converts liquid volume from liters to US gallons.
  * Validates against negative inputs and handles parsing exceptions.
- * 
  * @author Riasat Noor
  * @since 2026-09-22
  */
@@ -38,9 +36,9 @@ public class LitersToGallons {
 
         } catch (InputMismatchException e) {
             System.out.println("\n[!] Input Error: Volume must be a valid numerical value.");
-            System.out.println("Exception Message:           " + e.getMessage());
-            System.out.println("Exception Localized Message: " + e.getLocalizedMessage());
-            System.out.println("Exception Hashcode:          " + e.hashCode());
+            System.out.println("Exception Class:             " + e.getClass().getSimpleName());
+        	System.out.println("Exception Details:           " + e.toString());
+        	System.out.println("Exception Hashcode:          " + e.hashCode());
             scanner.nextLine(); // Clear invalid input buffer
         }
     }

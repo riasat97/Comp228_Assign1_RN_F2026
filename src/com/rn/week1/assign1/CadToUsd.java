@@ -15,16 +15,13 @@ import java.util.Scanner;
  * @since 2026-09-22
  */
 public class CadToUsd {
-
     // Exchange rate reference (e.g., 1 CAD = 0.74 USD)
     private final BigDecimal CAD_TO_USD_RATE = new BigDecimal("0.74");
-
     //@param scanner active Scanner instance passed from DriverMain
     public void convertCadToUsd(Scanner scanner) {
         System.out.println("\n=================================");
         System.out.println("          CAD TO USD             ");
         System.out.println("=================================");
-
         try {
             System.out.print("Enter amount in Canadian Dollars (CAD): ");
             BigDecimal cadAmount = scanner.nextBigDecimal();
@@ -34,11 +31,9 @@ public class CadToUsd {
                 System.out.println("Error: Currency amount cannot be negative.");
                 return;
             }
-
             // Calculation using BigDecimal with standard financial rounding
             BigDecimal usdAmount = cadAmount.multiply(CAD_TO_USD_RATE)
                                             .setScale(2, RoundingMode.HALF_UP);
-
             // Format as currency strings
             NumberFormat cadFormat = NumberFormat.getCurrencyInstance(Locale.CANADA);
             NumberFormat usdFormat = NumberFormat.getCurrencyInstance(Locale.US);
@@ -48,12 +43,11 @@ public class CadToUsd {
             System.out.println("Original amount: " + cadFormat.format(cadAmount));
             System.out.println("Converted amount:" + usdFormat.format(usdAmount));
             System.out.println("=================================");
-
         } catch (InputMismatchException e) {
             System.out.println("\n[!] Input Error: Amount must be a valid numerical value.");
-            System.out.println("Exception Message:           " + e.getMessage());
-            System.out.println("Exception Localized Message: " + e.getLocalizedMessage());
-            System.out.println("Exception Hashcode:          " + e.hashCode());
+            System.out.println("Exception Class:             " + e.getClass().getSimpleName());
+        	System.out.println("Exception Details:           " + e.toString());
+        	System.out.println("Exception Hashcode:          " + e.hashCode());
             scanner.nextLine(); // Clear bad input from buffer
         }
     }

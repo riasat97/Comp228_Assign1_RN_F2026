@@ -1,12 +1,10 @@
 package com.rn.week1.assign1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * Task B: Converts distance from miles to kilometers.
  * Performs input validation for non-negative values and handles
  * parsing exceptions gracefully.
- * 
  * @author Riasat Noor
  * @since 2026-09-22
  */
@@ -38,9 +36,9 @@ public class MilesToKm {
 
         } catch (InputMismatchException e) {
             System.out.println("\n[!] Input Error: Distance must be a valid numerical value.");
-            System.out.println("Exception Message:           " + e.getMessage());
-            System.out.println("Exception Localized Message: " + e.getLocalizedMessage());
-            System.out.println("Exception Hashcode:          " + e.hashCode());
+            System.out.println("Exception Class:             " + e.getClass().getSimpleName());
+        	System.out.println("Exception Details:           " + e.toString());
+        	System.out.println("Exception Hashcode:          " + e.hashCode());
             scanner.nextLine(); 
         }
     }
